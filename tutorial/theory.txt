@@ -1,0 +1,25 @@
+while React is excellent for UI, managing state across complex applications can lead to "prop drilling." Redux provides a centralized state management system to simplify this, 
+Redux Toolkit (RTK): Introduced as the modern standard (Redux 2.0), RTK reduces the boilerplate code and complexity associated with older versions of Redux, making state management more efficient
+
+Redux Toolkit Architecture-
+UI layer - is the screen of the user
+Redux Store - stores all the data that is centralized (storage)
+but how the redux store will know that i want to change the theme so there is a reducer in redux store which has all the functions that has been created. e.g change theme function is dispatched and already there will be reducer for that function , for adding to cart etc.
+
+after that when redux store send the action to the reducer then it update the state in the redux store and which is updated in the UI and the UI layer is updated 
+
+
+
+
+slice is basically a feature
+
+steps for redux code:
+1. create a store.js
+2. wrap <App/> with provider that is store so that all have access to the redux store
+3. we created features in the CounterSlice means counter feature that increment and decrements by using reducers, and also export all the reducers and the variable which is createSlice
+4. In store.js import the CounterSlice feature and export the configureStore
+5. Now in App.jsx create the UI and add the event handlers and import all the CounterSlice features
+6. import also useDispatch() and useSelector() to // useDispatch() actions ko dispatch karega on a click
+  // useSelector() count ki current value ko showcase karega in the UI
+
+now we have the redux working
